@@ -74,9 +74,10 @@ public class Map extends JPanel {
                 field[cellX][cellY] = HUMAN_DOT;
             else
                 field[cellX][cellY] = AI_DOT;
-            this.whoMove = !this.whoMove;
         } else
             field[cellX][cellY] = HUMAN_DOT;
+
+        this.whoMove = !this.whoMove;
 
         if (checkEndGame(HUMAN_DOT, STATE_WIN_HUMAN))
             return;
